@@ -1,20 +1,31 @@
 import os
 
 def generate_script(topic):
-    print(f"--- Generating Script for Topic: {topic} ---")
+    print(f"\n==========================================")
+    print(f"   GENERATING SCRIPT FOR TOPIC: {topic}")
+    print(f"==========================================\n")
     
-    # Yahan AI Script generation logic aayega
+    # Visual structure for script output
     script_prompt = f"""
-    Create a 2-minute YouTube Shorts script on the topic: {topic}.
-    Include:
-    1. Attention-grabbing Hook (0-5s)
-    2. Main Points
-    3. Call to Action (Subscribe)
+    Title: {topic}
+    ------------------------------------------
+    [00:00 - Hook]
+    Did you know this mind-blowing fact about {topic}? 
+    
+    [00:15 - Main Content]
+    Here are the top facts you need to know:
+    1. First amazing detail about {topic}.
+    2. Second crucial takeaway.
+    
+    [00:50 - Call To Action]
+    If you enjoyed this short, hit the subscribe button!
+    ------------------------------------------
     """
     
-    print("\n[SUCCESS] Script outline created successfully!")
+    print(script_prompt)
+    print("[SUCCESS] Script structure created successfully!")
     return script_prompt
 
 if __name__ == "__main__":
     video_topic = "Top 5 Space Secrets"
-    script = generate_script(video_topic)
+    generate_script(video_topic)
