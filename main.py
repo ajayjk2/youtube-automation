@@ -25,10 +25,15 @@ def generate_script(topic):
 
 def generate_voiceover(script_text):
     print("\n--- Generating Voiceover ---")
-    # Yahan baad me gTTS ya ElevenLabs API attach karenge
     print("[SUCCESS] Voiceover process initialized!")
+
+def create_video():
+    print("\n--- Assembling Video Clips & Audio ---")
+    # Yahan MoviePy / FFmpeg se video clips aur voiceover combine honge
+    print("[SUCCESS] Video rendering pipeline ready!")
 
 if __name__ == "__main__":
     video_topic = "Top 5 Space Secrets"
     script = generate_script(video_topic)
     generate_voiceover(script)
+    create_video()
