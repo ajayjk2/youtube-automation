@@ -5,7 +5,6 @@ def generate_script(topic):
     print(f"   GENERATING SCRIPT FOR TOPIC: {topic}")
     print(f"==========================================\n")
     
-    # Visual structure for script output
     script_prompt = f"""
     Title: {topic}
     ------------------------------------------
@@ -21,11 +20,15 @@ def generate_script(topic):
     If you enjoyed this short, hit the subscribe button!
     ------------------------------------------
     """
-    
     print(script_prompt)
-    print("[SUCCESS] Script structure created successfully!")
     return script_prompt
+
+def generate_voiceover(script_text):
+    print("\n--- Generating Voiceover ---")
+    # Yahan baad me gTTS ya ElevenLabs API attach karenge
+    print("[SUCCESS] Voiceover process initialized!")
 
 if __name__ == "__main__":
     video_topic = "Top 5 Space Secrets"
-    generate_script(video_topic)
+    script = generate_script(video_topic)
+    generate_voiceover(script)
