@@ -1,8 +1,20 @@
 import os
 
-# GitHub Actions me input() kaam nahi karta, isliye topic hardcode ya variable se lenge
-topic = "Amazing Facts About Space"
+def generate_script(topic):
+    print(f"--- Generating Script for Topic: {topic} ---")
+    
+    # Yahan AI Script generation logic aayega
+    script_prompt = f"""
+    Create a 2-minute YouTube Shorts script on the topic: {topic}.
+    Include:
+    1. Attention-grabbing Hook (0-5s)
+    2. Main Points
+    3. Call to Action (Subscribe)
+    """
+    
+    print("\n[SUCCESS] Script outline created successfully!")
+    return script_prompt
 
-print("YouTube Automation Setup Started!")
-print(f"Topic selected: {topic}")
-print("Next step: Script generation setup.")
+if __name__ == "__main__":
+    video_topic = "Top 5 Space Secrets"
+    script = generate_script(video_topic)
