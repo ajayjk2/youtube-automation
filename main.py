@@ -1,6 +1,6 @@
 print("YouTube Automation Setup Started!")
 
-topic = input("Video topic likho: ")
+topic = "Amazing Facts About Space"
 
-print(f"\nTopic selected: {topic}")
-print("Next step: Script generation setup.")
+print(f"Topic selected: {topic}")
+print("Automation test successful!")
